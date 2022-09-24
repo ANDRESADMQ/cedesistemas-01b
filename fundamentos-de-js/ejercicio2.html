@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+  <head>    
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+<body> 
+  
+  <h4> 
+      Suma dos números 
+  </h4> 
+  
+  <label for="domTextElement1">Número 1</label>
+  <input type="text" id="domTextElement1" > 
+
+  <label for="domTextElement2">Número 2</label>
+  <input type="text" id="domTextElement2" >
+
+  
+  <button type="button"  onclick="getValueInput()"> 
+      Calcular 
+  </button> 
+  
+  <p id="valueInput"></p> 
+
+  <script> 
+
+    const getValueInput = () =>{
+
+      let inputValue1 = document.getElementById("domTextElement1").value; 
+      let inputValue2 = document.getElementById("domTextElement2").value;
+      
+      if (isNaN(document.getElementById("domTextElement1")) && isNaN(document.getElementById("domTextElement2"))) {
+        inputValue1 = Number(inputValue1);
+        inputValue2 = Number(inputValue2);
+        let inputValue = inputValue1 + inputValue2; 
+        document.getElementById("valueInput").innerHTML = inputValue; 
+        } else {
+            console.log("Revise los datos ingresados");
+        }
+    }
+    
+  </script> 
+</body> 
+  
+</html> 

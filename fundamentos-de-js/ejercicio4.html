@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+    <head>    
+        <link rel="stylesheet" href="styles.css" />
+        <title>Document</title>
+    </head>
+<body> 
+  
+    <h2> Promedio de notas</h2> 
+
+    <h4>Notas</h4>
+    <p id="valueInput0"></p> 
+    <br>
+    <button type="button"  onclick="getValueInput()"> 
+        Calcular promedio
+    </button>
+    <br>    
+    <h4>Promedio de notas</h4>
+    <p id="valueInput1"></p> 
+
+    <script> 
+
+    let sumaAnio = 1;  
+    const getValueInput = () =>{
+
+        let notas = ["4.5","3.6","3.9","4.8","5"];
+        let numeroNotas = notas.length;
+        let suma = 0;
+        let cadena = "";
+        let promedio = 0;
+
+
+        for (let i = 0; i < numeroNotas; i++) {
+            if (i == numeroNotas){
+                cadena = cadena + notas[i];
+            }else{
+                cadena = cadena + notas[i] + "|";
+            }
+           
+            suma = suma + parseFloat(notas[i]);    
+
+        }
+
+        if (numeroNotas > 0){
+            promedio = suma / numeroNotas; 
+            document.getElementById("valueInput0").innerHTML = cadena;
+            document.getElementById("valueInput1").innerHTML = promedio;
+        }else{
+            console.log("Error");
+        }
+        
+        
+
+    }
+    
+  </script> 
+</body> 
+  
+</html> 

@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html> 
+
+<head>    
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+  
+<body> 
+
+    <section>
+        <button type="button"  onclick="getValueInput()"> 
+            Calcular promedio pares
+        </button>  
+        <h4 id="listaNotas"></h4>
+        <p id="valueInput-1"></p> 
+          
+        <h4 id="notas"></h4>
+        <p id="valueInput0"></p> 
+        <h4 id="promedio"></h4>
+        <p id="valueInput1"></p>
+    </section>
+
+    <script> 
+ 
+    const getValueInput = () =>{
+
+        let notas = ["1000","1111","2222","3333","4444","5555","6666","7777","8888","9999"];
+        let numeroNotas = notas.length;
+        let suma = 0;
+        let cadena = "";
+        let cadena2 = "";
+        let promedio = 0;
+        let numPares = 0;
+
+        let suma3 = 0;
+        let cadena3 = "";
+        let numImPares = 0;
+
+        for (let i = 0; i < numeroNotas; i++) {
+
+
+            if ( (notas[i] % 2 ) == 0){
+                if (i == numeroNotas){
+                    cadena = cadena + notas[i];
+                }else{
+                    cadena = cadena + notas[i] + "|";
+                }
+                suma = suma + parseFloat(notas[i]);  
+                numPares++;  
+            }else{
+
+                if (i == numeroNotas){
+                    cadena3 = cadena3 + notas[i];
+                }else{
+                    cadena3 = cadena3 + notas[i] + "|";
+                }
+                suma3 = suma3 + parseFloat(notas[i]);  
+                numImPares++; 
+
+
+            }
+
+            if (i == numeroNotas){
+                    cadena2 = cadena2 + notas[i];
+                }else{
+                    cadena2 = cadena2 + notas[i] + "|";
+                }
+
+
+        }
+
+        if (cadena != ""){
+            document.getElementById("listaNotas").innerHTML = "Listado de pares";
+            document.getElementById("valueInput-1").innerHTML = cadena2;
+        } 
+
+        if (numPares > 0){
+            promedio = suma / numPares; 
+            document.getElementById("notas").innerHTML = "Notas";
+            document.getElementById("valueInput0").innerHTML = cadena;
+            document.getElementById("promedio").innerHTML = "Promedio de pares";
+            document.getElementById("valueInput1").innerHTML = promedio;
+        }else{
+            console.log("Error");
+        }
+
+        if (cadena3 != ""){
+            document.getElementById("listaNotas").innerHTML = "Listado de impares";
+            document.getElementById("valueInput-1").innerHTML = cadena3;
+        } 
+
+        if (numImPares > 0){
+            promedio = 0;
+            promedio = suma3 / numImPares; 
+            document.getElementById("promedio").innerHTML = "Promedio de Impares";
+            document.getElementById("valueInput1").innerHTML = promedio;
+        }else{
+            console.log("Error");
+        }
+
+    }
+    
+  </script> 
+</body> 
+  
+</html> 

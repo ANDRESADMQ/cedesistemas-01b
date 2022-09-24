@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+    <head>    
+        <link rel="stylesheet" href="styles.css" />
+        <title>Document</title>
+    </head>
+<body> 
+  
+    <h2> Calculadora de años</h2> 
+    <h4>Año de nacimiento</h4>
+    <input type="date" id="domTextElement2" >
+  
+    <button type="button"  onclick="getValueInput()"> 
+        Calcular edad
+    </button> 
+    
+    <h4>Número de años</h4>
+    <p id="valueInput"></p> 
+
+    <script> 
+
+    let sumaAnio = 1;  
+    const getValueInput = () =>{
+        const date = new Date();
+        const anio = date.getFullYear();      
+        const mes  = date.getMonth() + 1;
+        const dia  = date.getDate(); 
+        let dd   = document.getElementById("domTextElement2").value.substring(8,10);
+        let mm   = document.getElementById("domTextElement2").value.substring(5,7);
+        let yyyy = document.getElementById("domTextElement2").value.substring(0,4);
+
+        if (mm > mes){
+            anios =  anio - yyyy - sumaAnio;
+        }else if ((mm = mes) && (dd > dia)) {
+            anios =  anio - yyyy - sumaAnio;
+        }else if ((mm = mes) && (dd <= dia)){
+            anios =  (anio - yyyy);
+        }
+        
+        document.getElementById("valueInput").innerHTML = anios; 
+    }
+    
+  </script> 
+</body> 
+  
+</html> 

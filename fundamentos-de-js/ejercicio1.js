@@ -1,0 +1,8 @@
+console.log("Paso 1: ", "Ubicar un puente" )
+console.log("Paso 2: ", "Acercarse al puente" )
+console.log("Paso 3: ", "Ubicarse al inicio de las escaleras" )
+console.log("Paso 4: ", "Subir escaleras que lleva a la plataforma del punente" )
+console.log("Paso 5: ", "Caminar sobre la plataforma del punte hasta llegar al fin del mismo " )
+console.log("Paso 6: ", "Ubicarse en las escaleras de salida de plataforma " )
+console.log("Paso 7: ", "Bajar escaleras que llevan fuera del punente " )
+console.log("Paso 8: ", "Fin de paso del punte " )

@@ -1,0 +1,12 @@
+/*#DBC56E,#F1C928,#F2E4AD,#295CBD,#485774,#DBC56E,#F1C928,#F2E4AD*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+*{
+    background-color: #DBC56E;
+    font-family: lato;
+}
+
+#notas, #promedio, #listaNotas{
+    font-size: 1.5em;
+}
+
+
